@@ -1,0 +1,21 @@
+{
+  "name": "novax",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NovaX - Crypto Fintech Demo Platform",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter @novax/api dev\" \"pnpm --filter @novax/web dev\"",
+    "dev:api": "pnpm --filter @novax/api dev",
+    "dev:web": "pnpm --filter @novax/web dev",
+    "build": "pnpm --filter @novax/shared build && pnpm --filter @novax/api build && pnpm --filter @novax/web build",
+    "lint": "pnpm -r lint",
+    "seed": "pnpm --filter @novax/api seed",
+    "test": "pnpm -r test"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
