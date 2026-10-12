@@ -5,7 +5,7 @@ import {
   TrendingUp, TrendingDown, RefreshCw, ArrowUpRight, ArrowDownRight
 } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5001';
+const API_BASE = (import.meta as any).env?.VITE_API_BASE_URL || 'http://localhost:5000';
 
 export function App() {
   const [selectedAsset, setSelectedAsset] = useState<'BTC' | 'NOVA'>('BTC');
